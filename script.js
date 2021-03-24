@@ -1,3 +1,4 @@
+
 const wordEl = document.getElementById("word");
 const wrongLettersEl = document.getElementById("wrong-letters");
 const playAgainBtn = document.getElementById("play-button");
@@ -7,7 +8,8 @@ const finalMessage = document.getElementById("final-message");
 
 const figureParts = document.querySelectorAll(".figure-part");
 
-const words = ["application", "programming", "interface", "wizard"];
+const words = ["application", "programming", "interface", "wizard", "potential", "ribbon", "information", "control", "highway", "reader", "professor", "evolution", "poetry", "career", "snuggle", "project", "distance", "breakfast", "conversation", "engagement", "progress", "champagne", "banana", "graduate", "partnership", "contact", "admiration", "communist", "makeup", "survivor"];
+
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
@@ -21,7 +23,7 @@ function displayWord() {
         .split("")
         .map(letter => `
         <span class="letter">
-          ${correctLetters.includes(letter) ? letter : ""}
+        ${correctLetters.includes(letter) ? letter : ""}
         </span>
         `).join("")}
     `;
